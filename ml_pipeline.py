@@ -12,7 +12,7 @@ from sklearn.metrics import accuracy_score
 
 def main():
     # Load the dataset
-    data = pd.read_csv("/Users/mncedisimncwabe/Documents/healthcare-dataset-stroke-data.csv")
+    data = pd.read_csv("data/healthcare-dataset-stroke-data.csv")
     
     # Prepare data
     X, y = prepare_data(data)
