@@ -1,5 +1,5 @@
-# Base Image
-FROM continuumio/miniconda3:23.3.1-0
+# Use the official Python image as a base image
+FROM python:3.9-slim
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -10,7 +10,7 @@ COPY requirements.txt /app/
 # Install dependencies using pip and clean up after
 RUN pip install --no-cache-dir -r requirements.txt
 
-# # Copy the application code into the container
+# Copy the application code into the container
 COPY . /app/
 
 # Expose the port the app runs on
